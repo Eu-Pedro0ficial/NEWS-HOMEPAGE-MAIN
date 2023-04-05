@@ -1,0 +1,275 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-family: 'Inter', sans-serif;
+}
+div.mask{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 225%;
+
+    background-color: hsla(240, 100%, 5%, 0.419);
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 70%;
+    height: 70px;
+
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+header div.logo{
+    font-weight: bold;
+    font-size: 2.4rem;
+    color:  hsl(240, 100%, 5%);
+}
+header div.links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    
+    width: 40%;
+}
+header div.links a{
+    text-decoration: none;
+    color: hsl(236, 13%, 42%);
+}
+header div.container-bar{
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    width: 30px;
+    height: 20px;
+    
+    cursor: pointer;
+}
+header div.container-bar div.bar{  
+    width: 100%;
+    height: 15%;
+    background-color: black;
+}
+
+aside.aside-menu{
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    width: 60%;
+    height: 225%;
+
+    background-color: hsl(36, 100%, 99%);
+}
+aside.aside-menu div.image{
+    display: flex;
+    justify-content: flex-end;
+    
+    width: 85%;
+
+    margin: auto;
+    margin-top: 30px;
+}
+aside.aside-menu div.image img{
+    cursor: pointer;
+}
+aside.aside-menu div.links{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+
+    width: 85%;
+    margin: auto;
+    margin-top: 40%;
+}
+aside.aside-menu div.links a{
+    text-decoration: none;
+    color: hsl(240, 100%, 5%);
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    width: 70%;
+    margin: auto;
+}
+main div.main-content{
+    width: 70%;
+    height: 550px;
+}
+main div.main-content img{
+    width: 97%;
+}
+main div.main-content div.content{
+    display: flex;
+    margin-top: 30px;
+    width: 95%;
+}
+main div.main-content div.content div.main-title{
+    width: 100%;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+main div.main-content div.content div.text-content{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+}
+main div.main-content div.content div.text-content button.button{
+    font-weight: 700;
+    margin-top: 20px;
+    width: 140px;
+    padding: 15px;
+    color: white;
+    background-color: hsl(5, 85%, 63%);
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+}
+main div.main-content div.content div.text-content button.button:hover{
+    background-color: hsl(240, 100%, 5%);
+}
+main aside{
+    display: flex;
+    justify-content: space-between;
+    align-items: self-start;
+    flex-direction: column;
+
+    padding: 20px;
+    width: 30%;
+    height: 550px;
+    background-color: hsl(240, 100%, 5%);
+}
+main aside h1.second-title{
+    color: hsl(35, 77%, 62%);
+}
+main aside div.aside-content{
+    padding-bottom: 20px;
+    border-bottom: 1px solid hsl(233, 8%, 79%);
+    margin-bottom: 30px;
+}
+main aside div.aside-content h3{
+    color:  white;
+    font-size: 1.2rem;
+}
+main aside div.aside-content p{
+    color: hsl(233, 8%, 79%);
+}
+
+section{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5%;
+
+    width: 70%;
+    margin: auto;
+    margin-top: 40px;
+}
+section div.section-content{
+    display: flex;
+    gap: 20px;
+    width: 340px;
+}
+section div.section-content img{
+    height: 60%;
+}
+section div.section-content div{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+
+    height: 60%;
+}
+section div.section-content div h1{
+    color: hsl(233, 8%, 79%);
+    font-size: 2.0rem;
+}
+section div.section-content div h2:hover{
+    color: hsl(5, 85%, 63%);
+}
+section div.section-content div p{
+    color: hsl(233, 8%, 79%);
+    font-weight: 700;
+}
+
+footer div.attribution {
+    font-size: 11px; 
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+footer div.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media(max-width: 1150px){
+    header div.container-bar{
+        display: flex;
+    }
+
+    header div.links{
+        display: none;
+    }
+
+    main{
+        justify-content: center;
+        gap: 50px;
+    }
+
+    main div.main-content{
+        width: 100%;
+        height: inherit;
+    }
+
+    main div.main-content img{
+        width: 100%;
+        height: 300px;
+    }
+
+    main div.main-content div.content{
+        flex-direction: column;
+    }
+
+    main aside{
+        width: 100%;
+    }
+}
+@media(max-width: 600px){
+    header{
+        width: 90%;
+    }
+    main{
+        width: 90%;
+    }
+    section{
+        width: 90%;
+    }
+
+    section div.section-content{
+        width: 100%;
+    }
+}
